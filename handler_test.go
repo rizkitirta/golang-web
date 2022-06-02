@@ -50,3 +50,26 @@ func TestServeMux(t *testing.T)  {
 		panic(err)	
 	}
 }
+
+func TestRequest(t *testing.T)  {
+	mux := http.NewServeMux()
+
+	mux.HandleFunc("/",func (writer http.ResponseWriter, req *http.Request)  {
+		fmt.Fprint(writer,req.Method)
+		fmt.Fprint(writer,req.RequestURI)
+	})
+
+	mux.HandleFunc("/hello-world",func(writer http.ResponseWriter,req *http.Request){
+		fmt.Fprint(writer,"Hello World")
+	})
+
+	server := http.Server {
+		Addr: "localhost:8080",
+		Handler: mux,
+	}
+
+	err := server.ListenAndServe()
+	if err != nil {
+		panic(err)	
+	}
+}
