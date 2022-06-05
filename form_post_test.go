@@ -10,7 +10,7 @@ import (
 )
 
 func FormPost(w http.ResponseWriter, r *http.Request) {
-	// err := r.ParseForm()
+	err := r.ParseForm()
 	if err != nil {
 		panic(err)
 	}
@@ -22,7 +22,7 @@ func FormPost(w http.ResponseWriter, r *http.Request) {
 	// Version 2
 	firstNameV2 := r.FormValue("firstName")
 	lastNameV2 := r.FormValue("lastName")
-	
+
 	fmt.Fprintf(w, "%s %s", firstName, lastName)
 	fmt.Fprintf(w, "%s %s", firstNameV2, lastNameV2)
 }
