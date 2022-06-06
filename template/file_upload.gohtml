@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+</head>
+<body>
+   <center>
+     <h2>File Upload</h2>
+    <form action="/file-upload" enctype="multipart/form-data" method="POST">
+        <label>
+            Name:
+            <input type="text" name="name"><br>
+        </label>
+        <br>
+        <label style="margin-left:90px;">
+            File
+            <input  type="file" name="file"><br>
+        </label>
+        <br>
+        <button type="submit" style="margin-left:-3%;">Submit</button>
+    </form>
+   </center>
+</body>
+</html>
