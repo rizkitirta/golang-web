@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- If Statement -->
+    {{if .Name}}
+    <h1>Nama : {{.Name}}</h1>
+    <h1>Umur : {{.Age}}</h1>
+    {{else}}
+    <h1>Nama :</h1>
+    <h1>Nama :</h1>
+    {{end}}
+    <!-- End If Statement -->
+
+    <!-- If Statement With Operator -->
+    <!-- eq (==), ne(!=), lt(<), le(<=), gt(>), ge(>=) -->
+    
+    {{if eq .Age 20}}
+    <h1>Nama : {{.Name}}</h1>
+    <h1>Umur : {{.Age}}</h1>
+    <p>Umur Anda 20</p>
+
+    {{else if lt .Age 18}}
+    <h1>Nama :</h1>
+    <h1>Nama :</h1>
+    <p>Umur Anda kurang dari 18</p>
+
+    {{else}}
+    <h1>Nama : {{.Name}}</h1>
+    <h1>Umur : {{.Age}}</h1>
+    <p>Umur Anda lebih dari 20</p>
+    {{end}}
+    <!-- End If Statement With Operator -->
+</body>
+
+</html>
