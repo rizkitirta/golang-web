@@ -30,7 +30,6 @@ func TestServeFile(t *testing.T)  {
 }
 
 // Versi golang embed
-
 //go:embed resources/index.html
 var resourcesOk string
 //go:embed resources/notFound.html

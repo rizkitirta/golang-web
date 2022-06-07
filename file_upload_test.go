@@ -68,7 +68,7 @@ func TestUploadFile(t *testing.T)  {
 
 	writer := multipart.NewWriter(body)
 	writer.WriteField("name", "test upload file")
-	file,err := writer.CreateFormFile("file", "contoh1.png")
+	file,err := writer.CreateFormFile("file", "contoh3.png")
 	if err != nil {
 		panic(err)
 	}
